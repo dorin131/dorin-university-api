@@ -1,0 +1,9 @@
+{
+  "restartable": "rs",
+  "watch": ["dist/"],
+  "ext": "js",
+  "exec": "node ./dist/server.js",
+  "events": {
+    "restart": "echo \"File $FILENAME changed.\""
+  }
+}
