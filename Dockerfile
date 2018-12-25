@@ -1,11 +1,16 @@
 FROM node:10
 
-WORKDIR /usr/src/app
+ADD src /srv/src
+ADD config /srv/config
 
-COPY package*.json ./
+COPY package*.json /srv/
+COPY tsconfig.json /srv/
+COPY nodemon.json /srv/
 
-COPY tsconfig.json ./
+WORKDIR /srv
 
-RUN npm install
+RUN npm i
 
-COPY ./dist ./dist
+EXPOSE 8081
+
+ENTRYPOINT npm run start-$environment

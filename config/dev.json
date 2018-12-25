@@ -1,3 +1,6 @@
 {
-  "logLevel": "silly"
+  "logLevel": "silly",
+  "server": {
+    "port": 8081
+  }
 }

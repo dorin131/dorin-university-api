@@ -1,3 +1,4 @@
 #!/bin/bash
 
-NODE_ENV=dev docker-compose up
+docker build -t dorin-university-backend .
+docker run -it -p 8081:8081 --env environment=dev dorin-university-backend

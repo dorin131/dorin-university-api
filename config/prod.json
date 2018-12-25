@@ -1,3 +1,6 @@
 {
-  "logLevel": "warn"
+  "logLevel": "info",
+  "server": {
+    "port": 80
+  }
 }

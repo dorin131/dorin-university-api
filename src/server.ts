@@ -1,11 +1,14 @@
 import express from 'express';
+import config from 'config';
 
 import * as logger from './utils/logger';
 import { healthCheck } from './controllers/default';
 
-const app: express.Application = express();
-const port: number = 8081;
+const app = express();
+const port = config.get('server.port');
 
 app.get('/', healthCheck);
 
-app.listen(port, () => logger.info(`Example app listening on port ${port}`));
+app.listen(port, () => logger.info(`Listening on port ${port}.`));
+
+logger.info(`Environment: ${config.get('environment')}`);

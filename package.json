@@ -5,8 +5,8 @@
   "repository": "",
   "main": "dist/server.js",
   "scripts": {
-    "start-prod": "tsc && node dist/server.js",
-    "start-dev": "concurrently \"tsc -w\" \"sleep 3; nodemon\"",
+    "start-prod": "NODE_ENV=prod tsc && node dist/server.js",
+    "start-dev": "NODE_ENV=dev concurrently \"tsc -w\" \"sleep 5; nodemon\"",
     "test": "mocha"
   },
   "author": "Dorin Fodor",
