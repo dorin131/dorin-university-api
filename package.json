@@ -7,7 +7,8 @@
   "scripts": {
     "start-prod": "NODE_ENV=prod tsc && node dist/server.js",
     "start-dev": "NODE_ENV=dev concurrently \"tsc -w\" \"sleep 5; nodemon\"",
-    "test": "mocha -r ts-node/register --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/mocha/results.xml tests/**/*.ts"
+    "test": "mocha -r ts-node/register tests/**/*.ts",
+    "test-ci": "mocha -r ts-node/register --reporter mocha-junit-reporter --reporter-options mochaFile=./test-results/mocha/results.xml tests/**/*.ts"
   },
   "author": "Dorin Fodor",
   "license": "ISC",

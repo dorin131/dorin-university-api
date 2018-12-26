@@ -12,7 +12,7 @@ jobs:
      - run: BRANCH=$CIRCLE_BRANCH ./scripts/test-ci.sh
 
      - store_artifacts:
-        path: /srv/test-results
+        path: test-results
         destination: prefix
 
      - store_test_results:
