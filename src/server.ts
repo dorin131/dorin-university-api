@@ -9,6 +9,6 @@ const port = config.get('server.port');
 
 app.get('/', healthCheck);
 
-app.listen(port, () => logger.info(`Listening on port ${port}.`));
+app.listen(port, () => logger.info(`Listening on port ${port}`));
 
 logger.info(`Environment: ${config.get('environment')}`);
