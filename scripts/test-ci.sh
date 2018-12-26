@@ -1,7 +1,3 @@
 #!/bin/bash
 
-if [ -z "${BRANCH}" ]; then
-BRANCH="local"
-fi
-
-docker run -it --env environment=test dorin-university-backend:$BRANCH /bin/bash -c "npm test"
+docker exec -it `docker container ps -q` bash -c "cd /srv && npm test"

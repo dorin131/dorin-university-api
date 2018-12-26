@@ -2,7 +2,7 @@
   "name": "dorin-university-backend",
   "version": "1.0.0",
   "description": "NodeJS Express API",
-  "repository": "",
+  "repository": "https://github.com/dorin131/dorin-university-api",
   "main": "dist/server.js",
   "scripts": {
     "start-prod": "NODE_ENV=prod tsc && node dist/server.js",
