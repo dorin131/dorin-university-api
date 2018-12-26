@@ -2,6 +2,7 @@ version: 2
 jobs:
  build:
    machine: true
+   working_directory: ~/src
    steps:
      - checkout
 
@@ -11,12 +12,12 @@ jobs:
      # run test
      - run: BRANCH=$CIRCLE_BRANCH ./scripts/test-ci.sh
 
-     - store_artifacts:
-        path: test-results
-        destination: prefix
-
      - store_test_results:
         path: test-results
+
+     - store_artifacts:
+        path: ./test-results/mocha/results.xml
+        destination: prefix
 
 
      # deploy the image
