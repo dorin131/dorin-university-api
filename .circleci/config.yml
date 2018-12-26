@@ -1,0 +1,15 @@
+version: 2
+jobs:
+ build:
+   machine: true
+   steps:
+     - checkout
+
+     # build the application image
+     - run: BRANCH=$CIRCLE_BRANCH ./scripts/build.sh
+
+     # run test
+     - run: BRANCH=$CIRCLE_BRANCH ./scripts/test-ci.sh
+
+     # deploy the image
+     #- run: docker push company/app:$CIRCLE_BRANCH
