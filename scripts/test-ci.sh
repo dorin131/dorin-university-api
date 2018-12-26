@@ -4,4 +4,4 @@ if [ -z "${BRANCH}" ]; then
 BRANCH="local"
 fi
 
-docker run -it -c "npm test" --env environment=test dorin-university-backend:$BRANCH
+docker run -it --env environment=test dorin-university-backend:$BRANCH /bin/bash -c "npm test"
