@@ -6,7 +6,7 @@ jobs:
      - checkout
 
      # build the application image
-     - run: BRANCH=$CIRCLE_BRANCH ./scripts/build.sh
+     #- run: BRANCH=$CIRCLE_BRANCH ./scripts/build.sh
 
      # run test
      - run: BRANCH=$CIRCLE_BRANCH ./scripts/test-ci.sh
