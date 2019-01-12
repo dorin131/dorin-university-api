@@ -13,5 +13,3 @@ WORKDIR /srv
 RUN npm i
 
 EXPOSE 8081
-
-ENTRYPOINT npm run start-$environment
