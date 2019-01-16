@@ -12,8 +12,9 @@ services:
      - ./src:/srv/src
 
   db:
-    image: "postgres:11.1"
+    image: "postgres:11.1-alpine"
     restart: always
     environment:
+      POSTGRES_DB: dorin-university
       POSTGRES_USER: dorin
       POSTGRES_PASSWORD: password
